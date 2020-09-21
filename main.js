@@ -27,7 +27,7 @@ client.on('message' , message => {
     if(command === 'me'){
         if (message.member.voice.channel)
         { 
-        message.channel.send('everyone shushed')
+        message.channel.send('STFU and play!')
                         
             let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
                        
@@ -37,7 +37,7 @@ client.on('message' , message => {
              }
             }}       
            
-        if(command === 'moi'){
+        if(command === 'ue'){
             if (message.member.voice.channel)
             { 
             message.channel.send('u can speak now');
