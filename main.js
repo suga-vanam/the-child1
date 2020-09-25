@@ -22,7 +22,10 @@ client.on('message' , message => {
         message.channel.send('pong!');
     }
     if(command ==='thala'){
-        message.channel.send('lebron is da GOAT!');
+        message.channel.send('lebron is da GOAT!https://www.youtube.com/watch?v=L2evguInh5Y');
+    }
+    if(command === 'help'){
+        message.channel.send('`-ping:to get a pong -thala:to see who the GOAT is -me:to mute everyone -ue:to unmute everyone`');
     }
     if(command === 'me'){
         if (message.member.voice.channel)
