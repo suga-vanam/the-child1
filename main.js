@@ -7,6 +7,7 @@ const prefix = '-';
 
 client.once('ready', () => {
     console.log('among us is online!');
+    client.user.setActivity('among us');
 });
 
 client.on('message' , message => {
