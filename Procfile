@@ -1,1 +1,1 @@
-Worker: node main.js,quote.js
+Worker: node main.js
