@@ -8,7 +8,7 @@ const prefix = '-';
 
 client.once('ready', () => {
     console.log('the child is online!');
-    client.user.setActivity('among us');
+    client.user.setActivity('Among Us');
 
 });
 
@@ -27,9 +27,13 @@ client.on('message' , message => {
     if(command === 'thala'){
         message.channel.send('lebron is da GOAT!https://www.youtube.com/watch?v=L2evguInh5Y');
     }
+
+
     if(command === 'thala'){
         message.channel.send(':goat:');
     }
+
+
     if(command === 'help'){
         message.channel.send(`
         these are my supported commands:
@@ -40,6 +44,9 @@ client.on('message' , message => {
         **-ue**:to unmute everyone
         `);
     }
+
+    
+
 
     if(command === 'quote'){
 
