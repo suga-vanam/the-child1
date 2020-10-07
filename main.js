@@ -22,7 +22,15 @@ client.on('message' , message => {
 
 
     if(command === 'ping'){
-        message.channel.send('pong!');
+        message.channel.send("pinging.....").then(m =>{
+            var ping = m.createdTimestamp - message.createdTimestamp;
+
+            var embed = new Discord.MessageEmbed()
+            .setAuthor(`Your ping is ${ping}`)
+            .setColor("your colour")
+
+            m.edit(embed)
+        });
     }
     if(command === 'thala'){
         message.channel.send('lebron is da GOAT!https://www.youtube.com/watch?v=L2evguInh5Y');
@@ -35,14 +43,18 @@ client.on('message' , message => {
 
 
     if(command === 'help'){
-        message.channel.send(`
-        these are my supported commands:
-        **-ping**:to get a pong
-        **-thala**:to see who the GOAT is
-        **-quote**:to see the wisdom of FIITJEE
-        **-me**:to mute everyone
-        **-ue**:to unmute everyone
-        `);
+        const embed = new Discord.MessageEmbed()
+        .setTitle('These are my supported commands:')
+        .addField("-help","To see this message",true)
+        .addField("-ping","to check your ping",true)
+        .addField("-thala","Too see who the GOAT is",true)
+        .addField("-quote","To see the wisdom of FIITJEE",true)
+        .addField("-me","to mute everyone",true)
+        .addField("-ue","To unmute everyone",true)
+        .setAuthor('Suga')
+        .setColor('your colour')
+
+        message.channel.send(embed)
     }
 
     
@@ -67,7 +79,10 @@ client.on('message' , message => {
         `If you fall into the loop hole, you are da losa(the loser). -MJR`,
         `do you have brain in your mind? -BSR`,
         `water is a micronutrient. -BSA`,
-        `If you say answer, I will deposit 100 money's in your account. -BJS`]
+        `If you say answer, I will deposit 100 money's in your account. -BJS`,
+        `If I give you one punch you will fly to hell!! -BJK`,
+        `Jiig Jaag motion. -CRA`,
+        `Now putading. -CRA`]
         var quote = Math.floor(Math.random() * quotes.length);
         message.channel.send(quotes[quote])
        
