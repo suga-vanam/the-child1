@@ -63,7 +63,7 @@ client.on('message' , message => {
 
 
     if(command === 'quote'){
-        const embed = new Discord.MessageEmbed()
+        
 
         var quotes = [`sometimes my squares are a bit round. -CVR`,
         `Studying is a non-spontaneous process. Watching TV isn't. -CVR`,
