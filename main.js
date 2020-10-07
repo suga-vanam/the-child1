@@ -53,6 +53,8 @@ client.on('message' , message => {
         .addField("-ue","To unmute everyone",true)
         .setAuthor('Suga')
         .setColor('your colour')
+        .setFooter("please don't spam." )
+
 
         message.channel.send(embed)
     }
@@ -61,6 +63,7 @@ client.on('message' , message => {
 
 
     if(command === 'quote'){
+        const embed = new Discord.MessageEmbed()
 
         var quotes = [`sometimes my squares are a bit round. -CVR`,
         `Studying is a non-spontaneous process. Watching TV isn't. -CVR`,
@@ -68,7 +71,7 @@ client.on('message' , message => {
         `Don't do hard work, don't do smart work, just do work. -MRJ`,
         `if you go minus 1, I go minus 2. -BJS`,
         `Just bother yourself!! -PCM`,
-        `Getting into IIT is easy,getting ur girlfriend into IIT is tough. -CVR`,
+        `Getting into IIT is easy, getting a girlfriend in IIT is tough. -CRSA`,
         `pls no one listen to my instructions. -EAB`,
         `You dont want to wash your face like you wash your clothes. -CVR`,
         `No, that is the centre of the earth, you cannot go there. -PGR`,
@@ -85,7 +88,7 @@ client.on('message' , message => {
         `Now putading. -CRA`]
         var quote = Math.floor(Math.random() * quotes.length);
         message.channel.send(quotes[quote])
-       
+        
         
     }
 
