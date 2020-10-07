@@ -27,7 +27,7 @@ client.on('message' , message => {
 
             var embed = new Discord.MessageEmbed()
             .setAuthor(`Your ping is ${ping}`)
-            .setColor("your colour")
+            .setColor("#BC0057")
 
             m.edit(embed)
         });
@@ -46,13 +46,13 @@ client.on('message' , message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('These are my supported commands:')
         .addField("-help","To see this message",true)
-        .addField("-ping","to check your ping",true)
-        .addField("-thala","Too see who the GOAT is",true)
+        .addField("-ping","To check your ping",true)
+        .addField("-thala","To see who the GOAT is",true)
         .addField("-quote","To see the wisdom of FIITJEE",true)
-        .addField("-me","to mute everyone",true)
+        .addField("-me","To mute everyone",true)
         .addField("-ue","To unmute everyone",true)
         .setAuthor('Suga')
-        .setColor('your colour')
+        .setColor('#0099E1')
         .setFooter("please don't spam." )
 
 
@@ -62,10 +62,9 @@ client.on('message' , message => {
     
 
 
-    if(command === 'quote'){
-        
+    if(command === 'quote'){       
 
-        var quotes = [`sometimes my squares are a bit round. -CVR`,
+         var quotes = [`sometimes my squares are a bit round. -CVR`,
         `Studying is a non-spontaneous process. Watching TV isn't. -CVR`,
         `Am I hot? -BJS`,
         `Don't do hard work, don't do smart work, just do work. -MRJ`,
