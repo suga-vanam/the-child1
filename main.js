@@ -44,7 +44,7 @@ client.on('message' , message => {
 
     if(command === 'help'){
         const embed = new Discord.MessageEmbed()
-        .setTitle('These are my supported commands:')
+        .setTitle('These are my supported commands(NoT CaSe SeNsiTivE):')
         .addField("-help","To see this message",true)
         .addField("-ping","To check your ping",true)
         .addField("-thala","To see who the GOAT is",true)
