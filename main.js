@@ -6,7 +6,7 @@ const prefix = '-';
 
 client.once('ready', () => {
     console.log('the child is online');
-    client.user.setActivity("The rules suck.")
+    client.user.setActivity("among us.")
 });
 
 
