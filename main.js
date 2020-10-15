@@ -14,7 +14,7 @@ const statuses = [
 client.once('ready', () => {
     console.log('the child is online');
     setInterval( ()=>{
-        const index = Math.floor(Math.random() * (statuses.length - 1) + 1);
+        const index = Math.floor(Math.random() * statuses.length);
         client.user.setActivity(statuses[index]);
     },10000);
 });
