@@ -7,8 +7,10 @@ const prefix = '-';
 
 const statuses = [
     `Among us`,
-    `with ${client.guilds.cache.size} servers`,
-    `as Imposter(idk wtf I'm doing)`
+    `with the rules`,
+    `as Imposter(idk wtf I'm doing)`,
+    `as Crewmate(oof i died)`
+    
     
     ];
 client.once('ready', () => {
@@ -96,7 +98,7 @@ client.on('message' , message => {
        `If I give you one punch you will fly to hell!! -BJK`,
        `Jiig Jaag motion. -CRA`,
        `Now putading. -CRA`,
-        `Nobody can continuously go up, and nobody can conyinuosly go down. -CRM`]
+        `Nobody can continuously go up, and nobody can continuosly go down. -CRM`]
        var quote = Math.floor(Math.random() * quotes.length);
        message.channel.send(quotes[quote])
        
