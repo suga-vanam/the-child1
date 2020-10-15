@@ -8,6 +8,7 @@ const prefix = '-';
 const statuses = [
     `Among us`,
     `with ${client.guilds.cache.size} servers`,
+    `as Imposter(idk wtf I'm doing)`
     
     ];
 client.once('ready', () => {
