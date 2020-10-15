@@ -4,13 +4,24 @@ const client = new Discord.Client();
 
 const prefix = '-';
 
+module.exports = (client) => {
+    let statuses = [
+        `people play Among us`,
+        `${client.guilds.cache.size} servers`,
+        `THE RULES SUCK BTW.`
+
+    ];
+    setInterval(function () {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        client.user.setActivity(status, {
+            type :"Watching"
+        });
+    }, 7000);
+     }
 
 
-client.once('ready', () => {
-    console.log('the child is online!');
-    client.user.setActivity('Among Us');
 
-});
+
 
 client.on('message' , message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -59,52 +70,54 @@ client.on('message' , message => {
         message.channel.send(embed)
     }
 
+
+        
+    if(command === 'quote'){       
+
+        var quotes = [`sometimes my squares are a bit round. -CVR`,
+       `Studying is a non-spontaneous process. Watching TV isn't. -CVR`,
+       `Am I hot? -BJS`,
+       `Don't do hard work, don't do smart work, just do work. -MRJ`,
+       `if you go minus 1, I go minus 2. -BJS`,
+       `Just bother yourself!! -PCM`,
+       `Getting into IIT is easy, getting a girlfriend in IIT is tough. -CRSA`,
+       `pls no one listen to my instructions. -EAB`,
+       `You dont want to wash your face like you wash your clothes. -CVR`,
+       `No, that is the centre of the earth, you cannot go there. -PGR`,
+       `Just like real life, even raoults law is not perfect. -CVR`,
+       `I can read most of your minds! -EAB`,
+       `CORONA BANDEMIC!! -EAB`,
+       `I like Ph :) -CVR`,
+       `If you fall into the loop hole, you are da losa(the loser). -MJR`,
+       `do you have brain in your mind? -BSR`,
+       `water is a micronutrient. -BSA`,
+       `If you say answer, I will deposit 100 money's in your account. -BJS`,
+       `If I give you one punch you will fly to hell!! -BJK`,
+       `Jiig Jaag motion. -CRA`,
+       `Now putading. -CRA`,
+        `Nobody can continuously go up, and nobody can conyinuosly go down. -CRM`]
+       var quote = Math.floor(Math.random() * quotes.length);
+       message.channel.send(quotes[quote])
+       
+       
+   }
+
+   if(command === 'me'){
+    if (message.member.voice.channel)
+    { 
+    message.channel.send('Everyone shushed.')
+                    
+        let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
+                   
+         for (const [memberID, member] of channel.members) 
+        {             
+        member.voice.setMute(true);         
+         }
+        }}
     
 
 
-    if(command === 'quote'){       
-
-         var quotes = [`sometimes my squares are a bit round. -CVR`,
-        `Studying is a non-spontaneous process. Watching TV isn't. -CVR`,
-        `Am I hot? -BJS`,
-        `Don't do hard work, don't do smart work, just do work. -MRJ`,
-        `if you go minus 1, I go minus 2. -BJS`,
-        `Just bother yourself!! -PCM`,
-        `Getting into IIT is easy, getting a girlfriend in IIT is tough. -CRSA`,
-        `pls no one listen to my instructions. -EAB`,
-        `You dont want to wash your face like you wash your clothes. -CVR`,
-        `No, that is the centre of the earth, you cannot go there. -PGR`,
-        `Just like real life, even raoults law is not perfect. -CVR`,
-        `I can read most of your minds! -EAB`,
-        `CORONA BANDEMIC!! -EAB`,
-        `I like Ph :) -CVR`,
-        `If you fall into the loop hole, you are da losa(the loser). -MJR`,
-        `do you have brain in your mind? -BSR`,
-        `water is a micronutrient. -BSA`,
-        `If you say answer, I will deposit 100 money's in your account. -BJS`,
-        `If I give you one punch you will fly to hell!! -BJK`,
-        `Jiig Jaag motion. -CRA`,
-        `Now putading. -CRA`]
-        var quote = Math.floor(Math.random() * quotes.length);
-        message.channel.send(quotes[quote])
-        
-        
-    }
-
-
-    if(command === 'me'){
-        if (message.member.voice.channel)
-        { 
-        message.channel.send('Everyone shushed.')
-                        
-            let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
-                       
-             for (const [memberID, member] of channel.members) 
-            {             
-            member.voice.setMute(true);         
-             }
-            }}
-                 
+    
            
         if(command === 'ue'){
             if (message.member.voice.channel)
