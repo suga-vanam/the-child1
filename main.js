@@ -4,6 +4,11 @@ const client = new Discord.Client();
 
 const prefix = '-';
 
+client.once('ready', () => {
+    console.log('the child is online');
+});
+
+
 module.exports = (client) => {
     let statuses = [
         `people play Among us`,
