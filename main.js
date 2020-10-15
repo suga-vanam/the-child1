@@ -7,7 +7,7 @@ const prefix = '-';
 
 const statuses = [
     `Among us`,
-    `${client.guilds.cache.size} servers`,
+    `with ${client.guilds.cache.size} servers`,
     
     ];
 client.once('ready', () => {
