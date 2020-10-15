@@ -4,10 +4,21 @@ const client = new Discord.Client();
 
 const prefix = '-';
 
+
+const statuses = [
+    `Among us`,
+    `${client.guilds.cache.size} servers`,
+    
+    ];
 client.once('ready', () => {
     console.log('the child is online');
-    client.user.setActivity("among us.")
+    setInterval( ()=>{
+        const index = Math.floor(Math.random() * (statuses.length - 1) + 1);
+        client.user.setActivity(statuses[index]);
+    },10000);
 });
+
+
 
 
 
