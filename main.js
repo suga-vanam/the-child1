@@ -10,23 +10,6 @@ client.once('ready', () => {
 });
 
 
-module.exports = (client) => {
-    let statuses = [
-        `people play Among us`,
-        `${client.guilds.cache.size} servers`,
-        `THE RULES SUCK BTW.`
-
-    ];
-    setInterval(function () {
-        let status = statuses[Math.floor(Math.random() * statuses.length)];
-        client.user.setActivity(status, {
-            type :"Watching"
-        });
-    }, 7000);
-     }
-
-
-
 
 
 client.on('message' , message => {
