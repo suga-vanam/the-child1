@@ -9,7 +9,8 @@ const statuses = [
     `Among us`,
     `with the rules`,
     `as Imposter(idk wtf I'm doing)`,
-    `as Crewmate(oof i died)`
+    `as Crewmate(oof i died)`,
+    `with 8 servers`
     
     
     ];
@@ -65,7 +66,7 @@ client.on('message' , message => {
         .addField("-quote","To see the wisdom of FIITJEE",true)
         .addField("-me","To mute everyone",true)
         .addField("-ue","To unmute everyone",true)
-        .setAuthor('Suga')
+        .setAuthor('Sugzy 23')
         .setColor('#0099E1')
         .setFooter("please don't spam." )
 
