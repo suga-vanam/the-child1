@@ -118,7 +118,7 @@ client.on('message' , message => {
     if (message.member.voice.channel)
     { 
     message.channel.send(`Everyone shushed.
-and yes ${user.username}, I agree, ps and db are porn stars indeed. `
+and yes ${user.username}, I agree, ps is a porn star indeed. `
        )
                     
         let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
