@@ -10,14 +10,15 @@ const statuses = [
     `with the rules`,
     `as Imposter(idk wtf I'm doing)`,
     `as Crewmate(oof i died)`,
-    `with 8 servers`
+    `with 9 servers`,
+    
     
     
     ];
 client.once('ready', () => {
     console.log('the child is online');
     setInterval( ()=>{
-        const index = Math.floor(Math.random() * statuses.length);
+        const index = Math.floor(Math.random() * statuses.length );
         client.user.setActivity(statuses[index]);
     },10000);
 });
@@ -72,7 +73,10 @@ client.on('message' , message => {
 
 
         message.channel.send(embed)
-    }
+    };
+
+    
+
 
 
         
@@ -99,17 +103,23 @@ client.on('message' , message => {
        `If I give you one punch you will fly to hell!! -BJK`,
        `Jiig Jaag motion. -CRA`,
        `Now putading. -CRA`,
-        `Nobody can continuously go up, and nobody can continuosly go down. -CRM`]
+        `Nobody can continuously go up, and nobody can conyinuosly go down. -CRM`]
        var quote = Math.floor(Math.random() * quotes.length);
        message.channel.send(quotes[quote])
        
        
-   }
+    }
+
+   
+    
 
    if(command === 'me'){
+       const user = message.author;
     if (message.member.voice.channel)
     { 
-    message.channel.send('Everyone shushed.')
+    message.channel.send(`Everyone shushed.
+and yes ${user.username}, I agree, ps and db are porn stars indeed. `
+       )
                     
         let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
                    
