@@ -10,11 +10,10 @@ const statuses = [
     `with the rules`,
     `as Imposter(idk wtf I'm doing)`,
     `as Crewmate(oof i died)`,
-    `with 9 servers`,
     
     
     
-    ];
+      ];
 client.once('ready', () => {
     console.log('the child is online');
     setInterval( ()=>{
@@ -38,7 +37,7 @@ client.on('message' , message => {
 
 
     if(command === 'ping'){
-        message.channel.send("pinging.....").then(m =>{
+        message.channel.send("ponging.....").then(m =>{
             var ping = m.createdTimestamp - message.createdTimestamp;
 
             var embed = new Discord.MessageEmbed()
@@ -74,12 +73,10 @@ client.on('message' , message => {
 
         message.channel.send(embed)
     };
-
-    
-
+   
 
 
-        
+
     if(command === 'quote'){       
 
         var quotes = [`sometimes my squares are a bit round. -CVR`,
@@ -103,13 +100,21 @@ client.on('message' , message => {
        `If I give you one punch you will fly to hell!! -BJK`,
        `Jiig Jaag motion. -CRA`,
        `Now putading. -CRA`,
-        `Nobody can continuously go up, and nobody can conyinuosly go down. -CRM`]
+        `Nobody can continuously go up, and nobody can continuosly go down. -CRM`,
+        `No eat, no NEET. -BJS`,
+        `Are you lebian? -BSS`,
+        `You are a boy, with maximum age of sexteen. -BJS`]
        var quote = Math.floor(Math.random() * quotes.length);
        message.channel.send(quotes[quote])
        
        
     }
 
+    if (command === 'servers'){
+        message.channel.send(`i am in ${client.guilds.cache.size} servers`);
+    }
+
+   
    
     
 
@@ -136,8 +141,8 @@ and yes ${user.username}, I agree, ps is a porn star indeed. `
         if(command === 'ue'){
             if (message.member.voice.channel)
             { 
-            message.channel.send('You can speak now.');
-                        
+            message.channel.send(`You can speak now.`);
+            
             let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
                        
              for (const [memberID, member] of channel.members) 
@@ -149,5 +154,6 @@ and yes ${user.username}, I agree, ps is a porn star indeed. `
 }); 
 
 
-client.login(process.env.TOKEN);
 
+
+client.login(process.env.TOKEN);
