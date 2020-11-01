@@ -66,6 +66,7 @@ client.on('message' , message => {
         .addField("-quote","To see the wisdom of FIITJEE",true)
         .addField("-me","To mute everyone",true)
         .addField("-ue","To unmute everyone",true)
+        .addField("-8ball","I'll try my best to predict your future",true)
         .setAuthor('Sugzy 23')
         .setColor('#0099E1')
         .setFooter("please don't spam." )
@@ -114,6 +115,19 @@ client.on('message' , message => {
         message.channel.send(`i am in ${client.guilds.cache.size} servers`);
     }
 
+    if (command === '8ball'){
+        var responses =[`vaipilla raja`,
+        `vaipu irruku`,
+        `kandippa nadakum`,
+        `mooditu poiru XD`,
+        `better not tell you now`,
+        `Don't count on it`,
+        `comedy pannathu da...lmao`,
+        ``]
+        var respond =Math.floor(Math.random() * responses.length);
+        message.channel.send(responses[respond])
+    }
+
    
    
     
@@ -123,7 +137,7 @@ client.on('message' , message => {
     if (message.member.voice.channel)
     { 
     message.channel.send(`Everyone shushed.
-and yes ${user.username}, I agree, ps is a porn star indeed. `
+ ${user.username}, wants to everyone to shut up. `
        )
                     
         let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
