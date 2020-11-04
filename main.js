@@ -67,7 +67,6 @@ client.on('message' , message => {
         .addField("-me","To mute everyone",true)
         .addField("-ue","To unmute everyone",true)
         .addField("-8ball","I'll try my best to predict your future",true)
-        .setAuthor('Sugzy 23')
         .setColor('#0099E1')
         .setFooter("please don't spam." )
 
