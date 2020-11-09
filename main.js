@@ -135,7 +135,7 @@ client.on('message' , message => {
     if (message.member.voice.channel)
     { 
     message.channel.send(`Everyone shushed.
- ${user.username}, wants to everyone to shut up. `
+${user.username} wants to everyone to shut up. `
        )
                     
         let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
