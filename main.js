@@ -48,7 +48,15 @@ client.on('message' , message => {
         });
     }
     if(command === 'thala'){
-        message.channel.send('lebron is da GOAT!https://www.youtube.com/watch?v=L2evguInh5Y');
+        var videos = [`https://www.youtube.com/watch?v=b117a8_jALE`,
+        `https://www.youtube.com/watch?v=OSkone_vFFk`,
+        `https://www.youtube.com/watch?v=L2evguInh5Y`,
+        `https://www.youtube.com/watch?v=6fQk1Od5kUw`,
+        `https://www.youtube.com/watch?v=BQzPmzZgF_0`,
+        `https://www.youtube.com/watch?v=N1SLd93oF5w`,
+        `https://www.youtube.com/watch?v=pxboHfZDJws`,]
+        var video =Math.floor(Math.random() * videos.length);
+
     }
 
 
@@ -67,6 +75,8 @@ client.on('message' , message => {
         .addField("-me","To mute everyone",true)
         .addField("-ue","To unmute everyone",true)
         .addField("-8ball","I'll try my best to predict your future",true)
+        .addField("-say","I'll say whatever you want me to.",true)
+        .setAuthor('Sugzy 23')
         .setColor('#0099E1')
         .setFooter("please don't spam." )
 
@@ -110,11 +120,10 @@ client.on('message' , message => {
        
     }
 
-    if (command === 'servers'){
-        message.channel.send(`i am in ${client.guilds.cache.size} servers`);
-    }
+    
+    
 
-    if (command === '8ball'){
+    if(command === '8ball'){
         var responses =[`vaipilla raja`,
         `vaipu irruku`,
         `kandippa nadakum`,
@@ -127,9 +136,15 @@ client.on('message' , message => {
         `enna kalaikradhey velaya pochu`,
         `ennamo panniko`,
         `poi polaikra velaya paaru da`,]
-                                      
+        
         var respond =Math.floor(Math.random() * responses.length);
         message.channel.send(responses[respond])
+    }
+
+    if(command === 'say'){
+        let botmessage =args.join(" ");
+        message.delete().catch();
+        message.channel.send(botmessage);
     }
 
    
@@ -141,7 +156,7 @@ client.on('message' , message => {
     if (message.member.voice.channel)
     { 
     message.channel.send(`Everyone shushed.
-${user.username} wants to everyone to shut up. `
+ ${user.username}, wants to everyone to shut up. `
        )
                     
         let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
@@ -169,7 +184,7 @@ ${user.username} wants to everyone to shut up. `
              }
             }}     
 
-}); 
+ }); 
 
 
 
