@@ -121,7 +121,13 @@ client.on('message' , message => {
         `mooditu poiru XD`,
         `better not tell you now`,
         `Don't count on it`,
-        `comedy pannathu da...lmao`,]
+        `comedy pannathu da...lmao`,
+        `obviously`,
+        `why not`,
+        `enna kalaikradhey velaya pochu`,
+        `ennamo panniko`,
+        `poi polaikra velaya paaru da`,]
+                                      
         var respond =Math.floor(Math.random() * responses.length);
         message.channel.send(responses[respond])
     }
