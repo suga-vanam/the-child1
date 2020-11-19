@@ -56,6 +56,7 @@ client.on('message' , message => {
         `https://www.youtube.com/watch?v=N1SLd93oF5w`,
         `https://www.youtube.com/watch?v=pxboHfZDJws`,]
         var video =Math.floor(Math.random() * videos.length);
+        message.channel.send(videos[video])
 
     }
 
