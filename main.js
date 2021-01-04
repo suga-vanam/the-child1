@@ -130,7 +130,7 @@ client.on('message' , message => {
         `mooditu poiru XD`,
         `better not tell you now`,
         `Don't count on it`,
-        `comedy pannathu da...lmao`,
+        `comedy pannadha da...lmao`,
         `obviously`,
         `why not`,
         `enna kalaikradhey velaya pochu`,
