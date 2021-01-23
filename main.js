@@ -151,7 +151,7 @@ client.on('message' , message => {
 
     if (command === 'clear'){
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply ("oops");
-        if(!args[0]) return message.channel.send("oof");
+        if(!args[0]) return message.channel.send("oof tell me how many messages to clear.");
         message.channel.bulkDelete(args[0]). then( () => {
         message.channel.send(`cleared ${args[0]} messages`). then(msg => msg.delete (5000));
         });
