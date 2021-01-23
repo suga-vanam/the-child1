@@ -1,8 +1,10 @@
 const Discord = require('discord.js')
 
+
 const client = new Discord.Client();
 
 const prefix = '-';
+
 
 
 const statuses = [
@@ -41,7 +43,7 @@ client.on('message' , message => {
             var ping = m.createdTimestamp - message.createdTimestamp;
 
             var embed = new Discord.MessageEmbed()
-            .setAuthor(`Your ping is ${ping}`)
+            .setAuthor(`Your ping is ${ping} ms`)
             .setColor("#BC0057")
 
             m.edit(embed)
@@ -130,7 +132,7 @@ client.on('message' , message => {
         `mooditu poiru XD`,
         `better not tell you now`,
         `Don't count on it`,
-        `comedy pannadha da...lmao`,
+        `comedy pannathu da...lmao`,
         `obviously`,
         `why not`,
         `enna kalaikradhey velaya pochu`,
@@ -147,6 +149,14 @@ client.on('message' , message => {
         message.channel.send(botmessage);
     }
 
+    if (command === 'clear'){
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply ("oops");
+        if(!args[0]) return message.channel.send("oof");
+        message.channel.bulkDelete(args[0]). then( () => {
+        message.channel.send(`cleared ${args[0]} messages`). then(msg => msg.delete (5000));
+        });
+    }
+    
    
    
     
@@ -184,7 +194,14 @@ client.on('message' , message => {
              }
             }}     
 
- }); 
+ });    
+ 
+
+
+
+
+
+
 
 
 
